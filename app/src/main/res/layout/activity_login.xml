@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".Login">
+
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="?attr/colorPrimary"
+      android:backgroundTint="#00008B"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      tools:ignore="MissingConstraints"
+      tools:layout_editor_absoluteX="0dp"
+      tools:layout_editor_absoluteY="0dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wallpaper_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"/>
+
+    <ImageView
+        android:id="@+id/cart_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:src="@drawable/baseline_add_shopping_cart_24">
+
+    </ImageView>
+
+  </androidx.appcompat.widget.Toolbar>
+
+
+  <TextView
+      android:id="@+id/loginTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="132dp"
+      android:layout_marginTop="156dp"
+      android:text="@string/login_here"
+      android:textColor="@color/black"
+      android:textSize="24sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/editUsername"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="32dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:ems="10"
+      android:drawableStart="@drawable/outline_email_24"
+      android:hint="Email"
+      android:inputType="text"
+      android:textAlignment="viewStart"
+      android:textSize="18sp"
+      app:layout_constraintTop_toBottomOf="@+id/loginTitle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <EditText
+      android:id="@+id/editPassword"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginStart="32dp"
+      android:layout_marginEnd="32dp"
+      android:ems="10"
+      android:hint="Password"
+      android:drawableStart="@drawable/outline_password_24"
+      android:inputType="textPassword"
+      android:textAlignment="viewStart"
+      android:textSize="18sp"
+      app:layout_constraintTop_toBottomOf="@+id/editUsername"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <Button
+      android:id="@+id/loginBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="50dp"
+      android:backgroundTint="#0404A8"
+      android:text="@string/click_to_login"
+      android:textColor="@color/white"
+      app:layout_constraintTop_toBottomOf="@+id/editPassword"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <TextView
+      android:id="@+id/regLink"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="@string/click_to_register_now"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:textColor="@color/black"
+      app:layout_constraintTop_toBottomOf="@+id/loginBtn"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

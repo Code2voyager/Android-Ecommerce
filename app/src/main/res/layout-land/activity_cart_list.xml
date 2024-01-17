@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".cart_list">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#00008B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"/>
+
+        <ImageView
+            android:id="@+id/cart_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/baseline_add_shopping_cart_24">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/user_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/baseline_logout_24">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/home_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/outline_home1_24">
+
+        </ImageView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/r_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+           android:layout_weight="1"
+          android:layout_marginTop="62dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total:"
+                android:textAlignment="textEnd"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="15dp"/>
+
+            <TextView
+                android:id="@+id/cart_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textAlignment="viewStart"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="15dp">
+
+
+            </TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0404A8"
+            android:text="@string/proceed_to_checkout"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

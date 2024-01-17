@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">NS_IndividualProj2</string>
+    <string name="wallpaper_name">Shoppers Stopper</string>
+    <string name="start">Let\'s Get Started!!!!</string>
+    <string name="proceed">Proceed</string>
+    <string name="products">Summer Outfits</string>
+    <string name="productstext">Image Name</string>
+    <string name="clothing1">Pink Coat</string>
+    <string name="c1price">CA$120.25</string>
+    <string name="cdes">twill, split leather, no appliqués, solid color, lapel collar, single-breasted , long sleeves, fully lined, 1 button, multipockets, single-breasted jacket</string>
+    <string name="click_to_register_now">Click To Register Now !!!!</string>
+    <string name="click_to_login_now">Click To Login Now !!!!</string>
+    <string name="proceed_to_checkout">Proceed To Checkout</string>
+    <string name="shoppers_stopper">SHOPPERS STOPPER</string>
+    <string name="you_have_successfully_n_placed_your_order">You Have SuccessfullyPlaced Your Order!!!!</string>
+
+        <string name="size_option">Select Size</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="login_here">Login Here!!!</string>
+    <string name="click_to_login">Click to Login</string>
+    <string name="register_here">Register Here!!!</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="add_to_cart">Add To Cart</string>
+
+
+</resources>

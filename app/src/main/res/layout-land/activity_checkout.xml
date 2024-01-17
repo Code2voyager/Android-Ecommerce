@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Checkout"
+    android:orientation="vertical"
+    android:background="#F0F0F0"
+    android:layout_gravity="center_horizontal">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#00008B"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wallpaper_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"/>
+
+        <ImageView
+            android:id="@+id/cart_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/baseline_add_shopping_cart_24">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/user_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/baseline_logout_24">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/home_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/outline_home1_24">
+
+        </ImageView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="CHECKOUT FORM"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- Form Layout -->
+    <LinearLayout
+        android:id="@+id/form1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_marginTop="105dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <!-- Full Name -->
+        <EditText
+            android:id="@+id/edit_Fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textSize="20sp" />
+
+        <!-- Phone Number and Email -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Phone Number -->
+            <EditText
+                android:id="@+id/edit_Phoneno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:textSize="20sp" />
+
+            <!-- Email -->
+            <EditText
+                android:id="@+id/edit_Email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="abc@gmail.com"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Address -->
+        <EditText
+            android:id="@+id/edit_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Address"
+            android:textSize="20sp" />
+
+        <!-- Zip Code and Country -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Zip Code -->
+            <EditText
+                android:id="@+id/edit_zipCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Postal Code"
+                android:inputType="text"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/edit_country"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" />
+            <!-- Country -->
+<!--            <EditText-->
+<!--                android:id="@+id/edit_country"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:hint="Country"-->
+<!--                android:textSize="20sp" />-->
+        </LinearLayout>
+
+        <!-- Payment Details -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment Details"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_chk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/form1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/edit_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CREDIT/DEBIT CARD"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/edit_cod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CASH ON DELIVERY"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp" />
+        </RadioGroup>
+
+        <!-- LinearLayout for Card Details -->
+        <LinearLayout
+            android:id="@+id/card_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_chk"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Name On Card -->
+            <EditText
+                android:id="@+id/edit_cardName"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:hint="Name On Your Card"
+                android:textSize="20sp" />
+
+            <!-- Card Number -->
+            <EditText
+                android:id="@+id/edit_cardNo"
+                android:layout_width="352dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Card Number"
+                android:maxLength="16"
+                android:textSize="20sp" />
+
+            <!-- LinearLayout for Card Expiry and CCV -->
+            <LinearLayout
+                android:id="@+id/card_details1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+
+                <!-- Card Expiry -->
+                <EditText
+                    android:id="@+id/edit_cardexpiry"
+                    android:layout_width="138dp"
+                    android:layout_height="wrap_content"
+                    android:hint="MM/YYYY"
+                    android:inputType="text"
+                    android:textSize="20sp" />
+
+                <!-- CCV -->
+                <EditText
+                    android:id="@+id/edit_CCV"
+                    android:layout_width="133dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:hint="CCV"
+                    android:inputType="text"
+                    android:maxLength="3"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Proceed Button -->
+        <Button
+            android:id="@+id/proceedbtn"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#003d80"
+            android:text="Proceed to Payment" />
+    </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
